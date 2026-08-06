@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flukia - Soluções Tecnológicas e Agentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Base e Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #040b16;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Cores da Marca Flukia */
+        :root {
+            --primary-blue: #081b33;
+            --accent-cyan: #00d2ff;
+            --text-light: #e0e6ed;
+        }
+
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(4, 11, 22, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Ajuste do container da Logo para alinhar imagem e texto */
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Espaço entre a imagem e o texto */
+            justify-content: center;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        /* Controle de tamanho da imagem da Logo */
+        .logo-img {
+            height: 45px; /* Ajuste este valor conforme a necessidade do tamanho da sua logo */
+            width: auto;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 5% 100px;
+            text-align: center;
+            background: radial-gradient(circle at center, var(--primary-blue) 0%, #040b16 70%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-cyan);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-cyan);
+            color: #000;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+        }
+
+        /* Seção Sobre / Solução */
+        .section {
+            padding: 80px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--accent-cyan);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .info-box {
+            background-color: var(--primary-blue);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        /* Valores Grid */
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .valor-card {
+            background-color: var(--primary-blue);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-cyan);
+        }
+
+        .valor-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Contato / Footer */
+        footer {
+            background-color: #02060d;
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: var(--text-light);
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="LogoFlukia.png" alt="Logo Flukia" class="logo-img">
+            <div>FLUK<span>IA</span></div>
+        </div>
+        <nav>
+            <a href="#solucao">A Solução</a>
+            <a href="#identidade">Quem Somos</a>
+            <a href="#valores">Pilares</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Automação Logística Colaborativa e <span>Agentes Inteligentes</span></h1>
+        <p>A Flukia transforma a gestão de compras industriais em conexões ágeis. Integramos IA ao seu ERP para tornar sua cadeia de suprimentos mais segura, eficiente e inteligente.</p>
+        <a href="#contato" class="btn">Agendar Demonstração</a>
+    </section>
+
+    <section id="solucao" class="section">
+        <h2 class="section-title">Nosso Produto & Serviço</h2>
+        <div class="grid-2">
+            <div class="info-box">
+                <h3>O Copiloto Flukia AI</h3>
+                <p>Nosso produto central é um agente autônomo projetado para o mercado B2B. Ele se conecta ao seu ecossistema de gestão (como SAP) para identificar demandas, cotar com fornecedores e analisar propostas em tempo real.</p>
+            </div>
+            <div class="info-box">
+                <h3>Modelo de Serviço (SaaS)</h3>
+                <p>Fornecemos licenciamento de tecnologia em nuvem. Nosso serviço assume o trabalho braçal e repetitivo da prospecção e estruturação de dados, entregando análises de custo-benefício prontas para a decisão final do analista.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="identidade" class="section" style="background-color: #061121;">
+        <h2 class="section-title">Diretriz Estratégica</h2>
+        <div class="grid-2">
+            <div>
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Nossa Missão</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Transformar a gestão de compras industriais, em conexões ágeis, por meio de inteligência artificial, tornando as cadeias de suprimentos mais seguras, eficientes e inteligentes.</p>
+                
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Nossa Visão</h3>
+                <p style="font-size: 1.2rem;">Ser referência em automação logística colaborativa, fortalecendo a rede de negócios e criando um ecossistema de transparência e desempenho entre fornecedores e empresas no mercado B2B.</p>
+            </div>
+            <div class="info-box" style="background-color: transparent; border: 2px dashed rgba(0, 210, 255, 0.3);">
+                <h3>Fundação</h3>
+                <p>Criada para revolucionar o setor, a Flukia tem como propósito primário conectar demandas industriais aos melhores fornecedores de forma autônoma e inteligente, elevando o patamar operacional das corporações.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="valores" class="section">
+        <h2 class="section-title">Nossos Valores</h2>
+        <div class="valores-grid">
+            <div class="valor-card">
+                <h4>1. Inovação</h4>
+                <p>Buscamos constantemente novas tecnologias para revolucionar a indústria.</p>
+            </div>
+            <div class="valor-card">
+                <h4>2. Inteligência em Dados</h4>
+                <p>Toda decisão deve ser fundamentada por dados confiáveis e análises avançadas.</p>
+            </div>
+            <div class="valor-card">
+                <h4>3. Confiança</h4>
+                <p>Garantimos transparência, segurança e ética em todas as decisões da IA.</p>
+            </div>
+            <div class="valor-card">
+                <h4>4. Eficiência</h4>
+                <p>Eliminamos desperdícios, reduzimos custos e aumentamos a competitividade.</p>
+            </div>
+            <div class="valor-card">
+                <h4>5. Colaboração</h4>
+                <p>Acreditamos que a tecnologia deve potencializar o trabalho humano, e não substituí-lo.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="logo" style="margin-bottom: 20px;">
+            <img src="LogoFlukia.png" alt="Logo Flukia" class="logo-img">
+            <div>FLUK<span>IA</span></div>
+        </div>
+        <div class="contact-info">
+            <p><strong>Proprietários:</strong> Bernardo Almeida | Emmanuel Emídio [cite: 1]</p>
+            <p><strong>Telefone:</strong> (55) 41 9 9801-4523 [cite: 1]</p>
+            <p><strong>E-mail:</strong> FlukiaWatts@outlook.com [cite: 1]</p>
+        </div>
+        <p class="copyright">&copy; 2026 Flukia. Todos os direitos reservados. Soluções tecnológicas e agentes!</p>
+    </footer>
+
+</body>
+</html>
